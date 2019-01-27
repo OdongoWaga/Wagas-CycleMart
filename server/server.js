@@ -30,8 +30,6 @@ const {admin} = require('./middleware/admin');
 
 //TYRES
 app.post('/api/product/tyre', auth, admin, (req,res)=>{
-     
-
     const tyre = new Tyre(req.body);
 
     tyre.save((err, doc)=> {
@@ -43,7 +41,12 @@ app.post('/api/product/tyre', auth, admin, (req,res)=>{
     })
 });
 
-app.get('')
+app.get('/api/product/tyres',(req,res)=> {
+    Tyre.find({}, (err, tyres)=> {
+        if(err) return res.status(400).send(err);
+        res.status(200).send(tyres)
+    })
+})
  
 
 
