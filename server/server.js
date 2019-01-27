@@ -21,9 +21,15 @@ app.use(cookieParser());
 //Models
 const {User} = require('./models/user');
 
+//Middlewares
 
+const {auth} = require('./middleware/auth')
 
 //Users//
+
+app.get('/api/user/auth',auth, (req,res) =>{
+
+})
 
 app.post('/api/users/register', (req, res)=> {
  const user = new User(req.body);
