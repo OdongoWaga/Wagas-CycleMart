@@ -22,11 +22,24 @@ app.use(cookieParser());
 const {User} = require('./models/user');
 const {Brand} = require('./models/brand');
 const {Tyre} = require('./models/tyres');
+const { Product} =require('./models/products')
+
 
 //Middlewares
 
 const {auth} = require('./middleware/auth');
 const {admin} = require('./middleware/admin');
+
+
+//PRODUCTS
+
+app.post('/api/product/article', auth, admin, (req,res)=>{
+
+
+})
+
+
+
 
 //TYRES
 app.post('/api/product/tyre', auth, admin, (req,res)=>{
