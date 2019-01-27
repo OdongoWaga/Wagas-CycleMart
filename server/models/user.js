@@ -33,6 +33,9 @@
    role:{
         type:Number,
         deafult:0
+    },
+    token: {
+        type:String
     }
 
  })

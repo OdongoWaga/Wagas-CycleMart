@@ -18,6 +18,11 @@ app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json());
 app.use(cookieParser());
  
+//Models
+const {User} = require('./models/user');
+
+
+
 //Users//
 
 app.post('/api/users/register', (req, res)=> {
