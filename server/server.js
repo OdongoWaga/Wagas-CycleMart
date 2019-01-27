@@ -21,6 +21,7 @@ app.use(cookieParser());
 //Models
 const {User} = require('./models/user');
 const {Brand} = require('./models/brand');
+const {Tyre} = require('./models/tyres');
 
 //Middlewares
 
@@ -28,7 +29,22 @@ const {auth} = require('./middleware/auth');
 const {admin} = require('./middleware/admin');
 
 //TYRES
+app.post('/api/product/tyre', auth, admin, (req,res)=>{
+     
 
+    const tyre = new Tyre(req.body);
+
+    tyre.save((err, doc)=> {
+        if(err) return res.json({success:false, err });
+        res.status(200).json({
+            success:true,
+            tyre:doc
+        })
+    })
+});
+
+app.get('')
+ 
 
 
 
