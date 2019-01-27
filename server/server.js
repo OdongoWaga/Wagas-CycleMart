@@ -25,9 +25,29 @@ const {User} = require('./models/user');
 
 const {auth} = require('./middleware/auth')
 
+//BRANDS
+
+app.post('/api/product/brand', auth, (req,res)=>{
+    
+})
+
+
 //Users//
 
+
 app.get('/api/user/auth',auth, (req,res) =>{
+    res.status(200).json({
+        isAdmin: req.user.role === 0 ? false: true,
+        isAuth: true,
+        email: req.user.email,
+        name: req.user.name,
+        lastname: req.user.lastname,
+        role:req.user.role,
+        cart: req.user.cart,
+        history: req.user.history 
+
+    })
+
 
 })
 
@@ -64,6 +84,19 @@ app.post('/api/users/login',(req,res)=>{
             })
         })
     })
+})
+
+app.get('/api/user/logout', auth, (req, res)=>{
+    User.findOneAndUpdate(
+        { _id: req.user._id },
+        {token: ''},
+        (err, doc) => {
+            if(err) return res.json({success:false,err });
+            return res.status(200).send({
+                success:true
+            })
+        }
+    )
 })
 
 
