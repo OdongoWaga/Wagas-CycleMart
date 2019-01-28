@@ -7,7 +7,7 @@ import React, { Component } from 'react'
       <div className= "container">
       <div className ="left">
       <div className="logo">
-            WAGAS
+            wagas
       </div>
 
       </div>
