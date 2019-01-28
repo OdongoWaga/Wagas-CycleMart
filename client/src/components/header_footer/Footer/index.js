@@ -60,10 +60,10 @@ const Footer = () => {
                         </div>
                     </div> 
                     <div className="left">
-                        <h2>Be the first to know</h2>
+                        <h2>Get Your Bikes</h2>
                         <div>
                             <div>
-                            Get all the latest information on events, sales and offers.You can miss out.
+                        Cyclists paradise get your bikes.
                             </div>
                         </div>
                     </div>      
@@ -73,4 +73,4 @@ const Footer = () => {
     );
 };
 
-export default Footer;
+export default Footer; 
