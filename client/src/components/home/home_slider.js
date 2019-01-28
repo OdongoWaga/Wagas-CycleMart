@@ -14,7 +14,7 @@ const HomeSlider = (props) => {
         },
         {
             img:'/images/featured/Trek.jpg',
-            lineOne:'BMC',
+            lineOne:'Trek',
             lineTwo:'Get discounts',
             linkTitle:'View offers',
             linkTo:'/shop'
@@ -23,7 +23,7 @@ const HomeSlider = (props) => {
 
     const settings = {
         dots: false,
-        infinite: true,
+        infinite: false,
         speed: 500,
         slidesToShow: 1,
         slidesToScroll: 1,
