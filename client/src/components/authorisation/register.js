@@ -16,7 +16,7 @@ class Register extends Component {
                 element: 'input',
                 value: '',
                 config:{
-                    name: 'name_input',
+                     name: 'name_input',
                     type: 'text',
                     placeholder: 'Enter your name'
                 },

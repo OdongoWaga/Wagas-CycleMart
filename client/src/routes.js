@@ -4,6 +4,10 @@ import Home from './components/home';
 import Layout from './hoc/layout';
 import RegisterLogin from './components/authorisation';
 import Register from './components/authorisation/register';
+import Auth from './hoc/auth';
+
+
+import UserDashboard from './components/User'
 
 
 const Routes = () => {
@@ -11,9 +15,13 @@ const Routes = () => {
 
     <Layout>
       <Switch>
-      <Route exact path="/" component= {Home} />
-      <Route exact path="/register_login" component= {RegisterLogin} />
-      <Route exact path="/register" component= {Register} />
+      <Route path="/user/dashboard" exact component={Auth(UserDashboard,true)}/>
+
+        <Route path="/register" exact component={Auth(Register,false)}/>
+        <Route path="/register_login" exact component={Auth(RegisterLogin,false)}/>
+        <Route path="/" exact component={Auth(Home,null)}/>
+
+
     </Switch>
     </Layout>
     
