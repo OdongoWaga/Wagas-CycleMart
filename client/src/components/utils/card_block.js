@@ -2,8 +2,6 @@ import React from 'react';
 import Card from './card';
 
 const CardBlock = (props) => {
-
-
     const renderCards = () =>(
         props.list ?
             props.list.map((card,i)=>(
@@ -30,7 +28,7 @@ const CardBlock = (props) => {
                     display:'flex',
                     flexWrap:'wrap'
                 }}>
-                    { renderCards(props.list)}
+                    {renderCards(props.list)}
                 </div>
 
             </div>
