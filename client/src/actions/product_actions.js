@@ -6,6 +6,7 @@ import {
     GET_BRANDS,
     ADD_PRODUCT,
     GET_PRODUCTS_TO_SHOP,
+    CLEAR_PRODUCT
 } from './types';
 
 import {PRODUCT_SERVER} from '../components/utils/misc';
@@ -102,5 +103,12 @@ export function addProduct(datatoSubmit){
     return {
         type: ADD_PRODUCT,
         payload: request
+    }
+}
+
+export function clearProduct(){
+    return {
+        type: CLEAR_PRODUCT,
+        payload: ''
     }
 }

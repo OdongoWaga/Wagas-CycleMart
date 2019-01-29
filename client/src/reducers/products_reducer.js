@@ -26,8 +26,8 @@ export default function(state={},action){
             }
         case ADD_PRODUCT:
             return {...state,addProduct: action.payload}
-        
-
+        case CLEAR_PRODUCT:
+            return {...state,addProduct: action.payload}
         default:
             return state;
     }
