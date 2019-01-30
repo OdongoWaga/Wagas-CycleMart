@@ -420,6 +420,12 @@ app.post('/api/users/update_profile',auth,(req,res)=>{
     );
 })
 
+app.get('/api/site/site_data',(req,res)=>{
+    Site.find({},(err,site)=>{
+        if(err) return res.status(400).send(err);
+        res.status(200).send(site[0].siteInfo)
+    });
+});
 
 
 
