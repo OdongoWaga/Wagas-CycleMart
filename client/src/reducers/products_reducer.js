@@ -5,7 +5,8 @@ import {
     GET_WOODS,
     CLEAR_PRODUCT,
     GET_PRODUCTS_TO_SHOP,
-    
+    GET_PRODUCT_DETAIL,
+    CLEAR_PRODUCT_DETAIL,
     ADD_PRODUCT
 } from '../actions/types';
  
