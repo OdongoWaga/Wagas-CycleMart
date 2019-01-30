@@ -32,7 +32,7 @@ const {User} = require('./models/user');
 const {Brand} = require('./models/brand');
 const {Tyre} = require('./models/tyres');
 const { Product} =require('./models/products')
-
+const { Site } = require('./models/site');
 
 //Middlewares
 
