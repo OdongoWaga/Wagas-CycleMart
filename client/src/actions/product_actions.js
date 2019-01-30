@@ -6,11 +6,29 @@ import {
     GET_BRANDS,
     ADD_PRODUCT,
     ADD_BRAND,
+    GET_PRODUCT_DETAIL,
     GET_PRODUCTS_TO_SHOP,
-    CLEAR_PRODUCT
+    CLEAR_PRODUCT,
+    CLEAR_PRODUCT_DETAIL
 } from './types';
 
 import {PRODUCT_SERVER} from '../components/utils/misc';
+
+
+export function getProductDetail(id){
+
+    const request = axios.get(`${PRODUCT_SERVER}/articles_by_id?id=${id}&type=single`)
+    .then(response=>{
+        return response.data[0]
+    });
+
+    return {
+        type: GET_PRODUCT_DETAIL,
+        payload: request
+    }
+
+}
+
 
 
 export function getProductsBySale(){
