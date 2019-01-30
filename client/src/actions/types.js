@@ -5,6 +5,7 @@ export const LOGOUT_USER ='logout_user';
 
 export const GET_PRODUCTS_BY_SALE = 'get_products_by_sale';
 export const GET_PRODUCTS_BY_ARRIVAL = 'get_products_by_arrival';
+export const GET_CART_ITEMS_USER = 'get_cart_item_user';
 
 export const GET_BRANDS = 'get_brands';
 export const ADD_BRAND = 'add_brand';
